@@ -11,7 +11,7 @@ import torch.optim as optim
 
 normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                  std=[0.229, 0.224, 0.225])
- 
+
 data_transforms = {
     'train':
         transforms.Compose([
@@ -104,7 +104,7 @@ model_trained = train_model(model, criterion, optimizer, num_epochs=3)
 
 ### save the model
 
-# torch.save(model_trained.state_dict(),'models/pytorch/weights.h5')
+torch.save(model_trained.state_dict(),'models/pytorch/weights.h5')
 
 ############# loading the model
 
